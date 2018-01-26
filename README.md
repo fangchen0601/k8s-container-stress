@@ -1,2 +1,3 @@
-Docker pull: docker pull mick0601/k8s-stress
+# Deploy to k8s
+kubectl apply -f deployment.yaml
 
