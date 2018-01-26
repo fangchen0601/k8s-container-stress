@@ -1,27 +1,2 @@
 Docker pull: docker pull mick0601/k8s-stress
-# k8s-Deployment
----
-apiVersion: extensions/v1beta1
-kind: Deployment
-metadata:
-  name: demo
-  namespace: dev
-spec:
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        app: demo
-    spec:
-      containers:
-      - name: demo
-        image: mick0601/k8s-stress
-        command: [ "/bin/bash", "-c", "--" ]
-        args: [ "while true; do sleep 30; done;" ]
-        resources:
-          limits:
-            cpu: 500m
-            memory: 1024Mi
-          requests:
-            cpu: 500m
-            memory: 1024Mi
+
